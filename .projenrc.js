@@ -1,8 +1,11 @@
 const { awscdk } = require('projen');
-const project = new awscdk.AwsCdkTypeScriptApp({
+const project = new awscdk.AwsCdkConstructLibrary({
+  author: 'Brandon Miller',
+  authorAddress: 'brandon@digital-reboot.com',
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
   name: 'cdk-library-renovo-microapi',
+  repositoryUrl: 'https://github.com/brandon/cdk-library-renovo-microapi.git',
 
   // deps: [],                /* Runtime dependencies of this module. */
   // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
