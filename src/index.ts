@@ -81,21 +81,6 @@ export interface MicroApiProps {
   readonly ephemeralStorageSize?: Size;
 
   /**
-   * Should Cloudwatch insights be enabled?
-   */
-  readonly enableCloudwatchInsights?: boolean;
-
-  /**
-   * Destination security group that the Lambda function will access.
-   */
-  readonly destinationSecurityGroup: ec2.ISecurityGroup;
-
-  /**
-   * Destination port that the Lambda function will access.
-   */
-  readonly destinationPort: ec2.Port;
-
-  /**
    * The allowed origins for CORS policy on the API Gateway
    */
   readonly allowedOrigins: string[];

@@ -122,13 +122,10 @@ const microApiProps: MicroApiProps = { ... }
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.allowedOrigins">allowedOrigins</a></code> | <code>string[]</code> | The allowed origins for CORS policy on the API Gateway. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.apiName">apiName</a></code> | <code>string</code> | The name of the project this Micro API is for. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.code">code</a></code> | <code>aws-cdk-lib.aws_lambda.Code</code> | The lambda code to use for this Micro API. |
-| <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.destinationPort">destinationPort</a></code> | <code>aws-cdk-lib.aws_ec2.Port</code> | Destination port that the Lambda function will access. |
-| <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.destinationSecurityGroup">destinationSecurityGroup</a></code> | <code>aws-cdk-lib.aws_ec2.ISecurityGroup</code> | Destination security group that the Lambda function will access. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.handler">handler</a></code> | <code>string</code> | The name of the method within your code that Lambda calls to execute your function. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.vpc">vpc</a></code> | <code>aws-cdk-lib.aws_ec2.IVpc</code> | The vpc where the Lambda function will run. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.vpcEndpoint">vpcEndpoint</a></code> | <code>aws-cdk-lib.aws_ec2.IInterfaceVpcEndpoint</code> | The vpc endpoint to associate the API with. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.authorizationType">authorizationType</a></code> | <code>aws-cdk-lib.aws_apigateway.AuthorizationType</code> | The type of authorization to use for the API. |
-| <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.enableCloudwatchInsights">enableCloudwatchInsights</a></code> | <code>boolean</code> | Should Cloudwatch insights be enabled? |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.environment">environment</a></code> | <code>{[ key: string ]: string}</code> | The environment variables the Lambda function will use. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | The size of the functions `/tmp` directory in MB. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.memorySize">memorySize</a></code> | <code>number</code> | The amount of memory, in MB, that is allocated to your Lambda function. |
@@ -170,30 +167,6 @@ public readonly code: Code;
 - *Type:* aws-cdk-lib.aws_lambda.Code
 
 The lambda code to use for this Micro API.
-
----
-
-##### `destinationPort`<sup>Required</sup> <a name="destinationPort" id="@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.destinationPort"></a>
-
-```typescript
-public readonly destinationPort: Port;
-```
-
-- *Type:* aws-cdk-lib.aws_ec2.Port
-
-Destination port that the Lambda function will access.
-
----
-
-##### `destinationSecurityGroup`<sup>Required</sup> <a name="destinationSecurityGroup" id="@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.destinationSecurityGroup"></a>
-
-```typescript
-public readonly destinationSecurityGroup: ISecurityGroup;
-```
-
-- *Type:* aws-cdk-lib.aws_ec2.ISecurityGroup
-
-Destination security group that the Lambda function will access.
 
 ---
 
@@ -255,18 +228,6 @@ public readonly authorizationType: AuthorizationType;
 - *Default:* apigateway.AuthorizationType.IAM
 
 The type of authorization to use for the API.
-
----
-
-##### `enableCloudwatchInsights`<sup>Optional</sup> <a name="enableCloudwatchInsights" id="@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.enableCloudwatchInsights"></a>
-
-```typescript
-public readonly enableCloudwatchInsights: boolean;
-```
-
-- *Type:* boolean
-
-Should Cloudwatch insights be enabled?
 
 ---
 

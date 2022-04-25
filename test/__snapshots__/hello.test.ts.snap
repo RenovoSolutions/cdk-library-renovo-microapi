@@ -134,22 +134,6 @@ Object {
     },
   },
   "Resources": Object {
-    "SecurityGroupDD263621": Object {
-      "Properties": Object {
-        "GroupDescription": "TestStack/SecurityGroup",
-        "SecurityGroupEgress": Array [
-          Object {
-            "CidrIp": "0.0.0.0/0",
-            "Description": "Allow all outbound traffic by default",
-            "IpProtocol": "-1",
-          },
-        ],
-        "VpcId": Object {
-          "Ref": "Vpc8378EB38",
-        },
-      },
-      "Type": "AWS::EC2::SecurityGroup",
-    },
     "TestMicroApiDeadLetterQueue0C069817": Object {
       "DeletionPolicy": "Delete",
       "Type": "AWS::SQS::Queue",
@@ -744,7 +728,7 @@ Object {
           "S3Bucket": Object {
             "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
           },
-          "S3Key": "1c305d36ecab906c8e05a930ccf614d172ac96c365580dc32c9df1243472ac10.zip",
+          "S3Key": "57eb66d1b4c5fcee2eba477f978d799e4e35cddd09530a1d99d77c8c36a7a358.zip",
         },
         "DeadLetterConfig": Object {
           "TargetArn": Object {
