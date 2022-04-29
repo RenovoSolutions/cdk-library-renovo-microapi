@@ -22,6 +22,12 @@ API gateways are a managed service that lives outside of our own VPC. Therefore 
 
 ![private api traffic flow](docs/private_api_traffic.png)
 
+## The old setup, using public traffic flow
+
+We used to deploy API gateways as public endpoints. For the sake of comparison here is what the old traffic flow would have looked like:
+
+![public api traffic flow](docs/public_api_traffic.png)
+
 ## References
 
 - [Creating a private API in Amazon API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-private-apis.html)
