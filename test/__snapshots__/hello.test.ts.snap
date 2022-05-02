@@ -73,6 +73,11 @@ Object {
     },
   },
   "Outputs": Object {
+    "TestMicroApiLambdaName2A999F79": Object {
+      "Value": Object {
+        "Ref": "TestMicroApihandlerAPIExample19E52EBB",
+      },
+    },
     "TestMicroApiPrivateExecuteUrlF62DAB5B": Object {
       "Value": Object {
         "Fn::Join": Array [
