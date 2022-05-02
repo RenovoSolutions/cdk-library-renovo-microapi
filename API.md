@@ -130,6 +130,7 @@ const microApiProps: MicroApiProps = { ... }
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.ephemeralStorageSize">ephemeralStorageSize</a></code> | <code>aws-cdk-lib.Size</code> | The size of the functions `/tmp` directory in MB. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.memorySize">memorySize</a></code> | <code>number</code> | The amount of memory, in MB, that is allocated to your Lambda function. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.runtime">runtime</a></code> | <code>aws-cdk-lib.aws_lambda.Runtime</code> | The runtime to use for this Micro API. |
+| <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.stageName">stageName</a></code> | <code>string</code> | The stage name to use for the deployment. |
 | <code><a href="#@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.timeout">timeout</a></code> | <code>aws-cdk-lib.Duration</code> | The lambda function timeout. |
 
 ---
@@ -283,6 +284,19 @@ public readonly runtime: Runtime;
 - *Default:* lambda.Runtime.DOTNET_6
 
 The runtime to use for this Micro API.
+
+---
+
+##### `stageName`<sup>Optional</sup> <a name="stageName" id="@renovosolutions/cdk-library-renovo-microapi.MicroApiProps.property.stageName"></a>
+
+```typescript
+public readonly stageName: string;
+```
+
+- *Type:* string
+- *Default:* 'dev'
+
+The stage name to use for the deployment.
 
 ---
 

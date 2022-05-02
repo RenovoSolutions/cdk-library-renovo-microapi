@@ -21,6 +21,13 @@ export interface MicroApiProps {
   readonly apiName: string;
 
   /**
+   * The stage name to use for the deployment
+   *
+   * @default 'dev'
+   */
+  readonly stageName?: string;
+
+  /**
    * The runtime to use for this Micro API
    *
    * @default lambda.Runtime.DOTNET_6
@@ -107,6 +114,7 @@ export class MicroApi extends Construct {
     super(scope, id);
 
     const environment = props.environment ?? undefined;
+    const stageName = props.stageName ?? 'dev';
 
     const deadLetterQueue = new sqs.Queue(this, 'DeadLetterQueue');
 
@@ -170,6 +178,7 @@ export class MicroApi extends Construct {
           status: true,
           user: true,
         }),
+        stageName,
       },
       defaultMethodOptions: {
         authorizationType,

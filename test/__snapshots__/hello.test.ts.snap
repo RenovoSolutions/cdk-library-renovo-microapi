@@ -92,7 +92,7 @@ Object {
             },
             "/",
             Object {
-              "Ref": "TestMicroApiapiAPIExampleDeploymentStageprodA3734B0B",
+              "Ref": "TestMicroApiapiAPIExampleDeploymentStagedev0832C332",
             },
             "/",
           ],
@@ -118,7 +118,7 @@ Object {
             },
             "/",
             Object {
-              "Ref": "TestMicroApiapiAPIExampleDeploymentStageprodA3734B0B",
+              "Ref": "TestMicroApiapiAPIExampleDeploymentStagedev0832C332",
             },
             "/",
           ],
@@ -373,7 +373,7 @@ Object {
               },
               "/",
               Object {
-                "Ref": "TestMicroApiapiAPIExampleDeploymentStageprodA3734B0B",
+                "Ref": "TestMicroApiapiAPIExampleDeploymentStagedev0832C332",
               },
               "/*/",
             ],
@@ -480,7 +480,7 @@ Object {
       },
       "Type": "AWS::ApiGateway::Deployment",
     },
-    "TestMicroApiapiAPIExampleDeploymentStageprodA3734B0B": Object {
+    "TestMicroApiapiAPIExampleDeploymentStagedev0832C332": Object {
       "DependsOn": Array [
         "TestMicroApiapiAPIExampleAccountB56DA43E",
       ],
@@ -500,7 +500,7 @@ Object {
         "RestApiId": Object {
           "Ref": "TestMicroApiapiAPIExample05C93BF9",
         },
-        "StageName": "prod",
+        "StageName": "dev",
       },
       "Type": "AWS::ApiGateway::Stage",
     },
@@ -633,7 +633,7 @@ Object {
               },
               "/",
               Object {
-                "Ref": "TestMicroApiapiAPIExampleDeploymentStageprodA3734B0B",
+                "Ref": "TestMicroApiapiAPIExampleDeploymentStagedev0832C332",
               },
               "/*/*",
             ],
