@@ -219,5 +219,9 @@ export class MicroApi extends Construct {
     new CfnOutput(this, 'PrivateExecuteUrl', {
       value: `https://${api.restApiId}-${props.vpcEndpoint.vpcEndpointId}.execute-api.${Stack.of(this).region}.${Stack.of(this).urlSuffix}/${api.deploymentStage.stageName}/`,
     });
+
+    new CfnOutput(this, 'LambdaName', {
+      value: handler.functionName,
+    });
   }
 }
