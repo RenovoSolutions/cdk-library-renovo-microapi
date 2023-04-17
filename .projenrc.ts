@@ -77,7 +77,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
       timers: 'fake',
     },
   },
-  workflowNodeVersion: '14.17.0',
   gitignore: ['test/lambda/src/lambda/bin', 'test/lambda/src/lambda/obj'],
 });
 
