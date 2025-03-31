@@ -132,7 +132,7 @@ export class MicroApi extends Construct {
     });
 
     const handler = new lambda.Function(this, `handler${props.apiName}`, {
-      runtime: lambda.Runtime.DOTNET_6,
+      runtime: props.runtime ?? lambda.Runtime.DOTNET_8,
       code: props.code,
       handler: props.handler,
       description: `${props.apiName} Micro API`,

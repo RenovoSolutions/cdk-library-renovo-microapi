@@ -473,7 +473,7 @@ Object {
       "Type": "AWS::IAM::Role",
       "UpdateReplacePolicy": "Retain",
     },
-    "TestMicroApiapiAPIExampleDeployment893535AF36c48cd303195cbda45b763c8a6e0e11": Object {
+    "TestMicroApiapiAPIExampleDeployment893535AF84e57fd170805491c7287b1f46149213": Object {
       "DependsOn": Array [
         "TestMicroApiapiAPIExampleproxyANY48971929",
         "TestMicroApiapiAPIExampleproxyOPTIONSD515877B",
@@ -504,7 +504,7 @@ Object {
           "Format": "{\\"requestId\\":\\"$context.requestId\\",\\"ip\\":\\"$context.identity.sourceIp\\",\\"user\\":\\"$context.identity.user\\",\\"caller\\":\\"$context.identity.caller\\",\\"requestTime\\":\\"$context.requestTime\\",\\"httpMethod\\":\\"$context.httpMethod\\",\\"resourcePath\\":\\"$context.resourcePath\\",\\"status\\":\\"$context.status\\",\\"protocol\\":\\"$context.protocol\\",\\"responseLength\\":\\"$context.responseLength\\"}",
         },
         "DeploymentId": Object {
-          "Ref": "TestMicroApiapiAPIExampleDeployment893535AF36c48cd303195cbda45b763c8a6e0e11",
+          "Ref": "TestMicroApiapiAPIExampleDeployment893535AF84e57fd170805491c7287b1f46149213",
         },
         "RestApiId": Object {
           "Ref": "TestMicroApiapiAPIExample05C93BF9",
@@ -515,6 +515,7 @@ Object {
     },
     "TestMicroApiapiAPIExampleOPTIONS53408613": Object {
       "Properties": Object {
+        "ApiKeyRequired": false,
         "AuthorizationType": "NONE",
         "HttpMethod": "OPTIONS",
         "Integration": Object {
@@ -690,6 +691,7 @@ Object {
     },
     "TestMicroApiapiAPIExampleproxyOPTIONSD515877B": Object {
       "Properties": Object {
+        "ApiKeyRequired": false,
         "AuthorizationType": "NONE",
         "HttpMethod": "OPTIONS",
         "Integration": Object {
@@ -774,7 +776,7 @@ Object {
             "Arn",
           ],
         },
-        "Runtime": "dotnet6",
+        "Runtime": "dotnet8",
         "Timeout": 30,
         "VpcConfig": Object {
           "SecurityGroupIds": Array [
