@@ -2,7 +2,8 @@ import { awscdk, javascript } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.186.0',
+  cdkVersion: '2.202.0',
+  jsiiVersion: '^5.8.0',
   projenrcTs: true,
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-renovo-microapi',
@@ -66,7 +67,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   eslint: true,
   publishToPypi: {
     distName: 'renovosolutions.aws-cdk-renovo-microapi',
-    module: 'ipam',
+    module: 'renovosolutions_microapi',
   },
   publishToNuget: {
     dotNetNamespace: 'renovosolutions',
@@ -74,7 +75,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   },
   jestOptions: {
     jestConfig: {
-      timers: 'fake',
+      fakeTimers: {
+        enableGlobally: true,
+      },
     },
   },
   gitignore: ['test/lambda/src/lambda/bin', 'test/lambda/src/lambda/obj'],
